@@ -20,8 +20,7 @@ public class Button extends javax.swing.JFrame {
     }
 
     
-    @SuppressWarnings("unchecked")
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+   
     private void initComponents() {
 
         Backspace = new javax.swing.JButton();
@@ -301,75 +300,75 @@ public class Button extends javax.swing.JFrame {
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 520, 70, 90));
 
         pack();
-    }// </editor-fold>//GEN-END:initComponents
+    }
     private void EnterNumbers(String numIn){ //this how we get numbers to show on panel
         String Nums = Results.getText() + numIn; // adds numbers on to the end 
         Results.setText(Nums); //Setting the results panel to the numbers that we click
     }
-    private void num5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_num5ActionPerformed
-        EnterNumbers("5");     // TODO add your handling code here:
-    }//GEN-LAST:event_num5ActionPerformed
+    private void num5ActionPerformed(java.awt.event.ActionEvent evt) {
+        EnterNumbers("5");    
+    }
 
     private void changeSignActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_changeSignActionPerformed
         double number = Double.parseDouble(String.valueOf(Results.getText())); //as the numbers are input as strings the Double.parseDouble reads thourgh and converts the number into a double and saves it.
         number = number * (-1);
         Results.setText(String.valueOf(number));
-    }//GEN-LAST:event_changeSignActionPerformed
+    }
 
-    private void num9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_num9ActionPerformed
+    private void num9ActionPerformed(java.awt.event.ActionEvent evt) {
         EnterNumbers("9");         
-    }//GEN-LAST:event_num9ActionPerformed
+    }
 
-    private void divideActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_divideActionPerformed
+    private void divideActionPerformed(java.awt.event.ActionEvent evt) {
            firstNumber = Double.parseDouble(Results.getText());
            Results.setText("");
            operator = "/";
-    }//GEN-LAST:event_divideActionPerformed
+    }/
 
-    private void num6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_num6ActionPerformed
+    private void num6ActionPerformed(java.awt.event.ActionEvent evt) {
         EnterNumbers("6");     // inputs the number 6
-    }//GEN-LAST:event_num6ActionPerformed
+    }
 
-    private void additionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_additionActionPerformed
+    private void additionActionPerformed(java.awt.event.ActionEvent evt) {
        firstNumber = Double.parseDouble(Results.getText());
           Results.setText("");
            operator = "+";
-    }//GEN-LAST:event_additionActionPerformed
+    }
 
-    private void num4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_num4ActionPerformed
+    private void num4ActionPerformed(java.awt.event.ActionEvent evt) {
         EnterNumbers("4");         // inputs the number 4
-    }//GEN-LAST:event_num4ActionPerformed
+    }
 
-    private void multiplyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_multiplyActionPerformed
+    private void multiplyActionPerformed(java.awt.event.ActionEvent evt) {
         firstNumber = Double.parseDouble(Results.getText());
            Results.setText("");
            operator = "x";
-    }//GEN-LAST:event_multiplyActionPerformed
+    }
 
-    private void num1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_num1ActionPerformed
+    private void num1ActionPerformed(java.awt.event.ActionEvent evt) {
     EnterNumbers("1");     /// inputs the number 1
-    }//GEN-LAST:event_num1ActionPerformed
+    }
 
-    private void num2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_num2ActionPerformed
+    private void num2ActionPerformed(java.awt.event.ActionEvent evt) {
         EnterNumbers("2");     // inputs the number 2
-    }//GEN-LAST:event_num2ActionPerformed
+    }
 
-    private void num3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_num3ActionPerformed
+    private void num3ActionPerformed(java.awt.event.ActionEvent evt) {
         EnterNumbers("3");     /// inputs the number 3
-    }//GEN-LAST:event_num3ActionPerformed
+    }
 
-    private void subtractionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_subtractionActionPerformed
+    private void subtractionActionPerformed(java.awt.event.ActionEvent evt) {
         firstNumber = Double.parseDouble(Results.getText());
            Results.setText("");
            operator = "-";
 
-    }//GEN-LAST:event_subtractionActionPerformed
+    }
 
-    private void num0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_num0ActionPerformed
+    private void num0ActionPerformed(java.awt.event.ActionEvent evt) {
         EnterNumbers("0");         // inputs the number 0
-    }//GEN-LAST:event_num0ActionPerformed
+    }
 
-    private void toEqualActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_toEqualActionPerformed
+    private void toEqualActionPerformed(java.awt.event.ActionEvent evt) {
         secondNumber = Double.parseDouble(Results.getText()); // Computation then casting the numbers back to Strings for display
         if(operator == "+"){
             result = firstNumber + secondNumber;
@@ -391,15 +390,15 @@ public class Button extends javax.swing.JFrame {
             result = Math.pow(firstNumber,  secondNumber);
             Results.setText(String.valueOf(result));
         }
-    }//GEN-LAST:event_toEqualActionPerformed
+    }
 
-    private void toPowerOfActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_toPowerOfActionPerformed
+    private void toPowerOfActionPerformed(java.awt.event.ActionEvent evt) {
        firstNumber = Double.parseDouble(Results.getText());
        Results.setText(""); //Clears the Screen 
        operator = "^";
-    }//GEN-LAST:event_toPowerOfActionPerformed
+    }
 
-    private void BackspaceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BackspaceActionPerformed
+    private void BackspaceActionPerformed(java.awt.event.ActionEvent evt) {
          String backSpace = null;
          if(Results.getText().length() > 0){
              StringBuilder sb = new StringBuilder(Results.getText()); //Created an object to hold the text from Results 
@@ -409,28 +408,30 @@ public class Button extends javax.swing.JFrame {
          }
     }//GEN-LAST:event_BackspaceActionPerformed
 
-    private void num7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_num7ActionPerformed
+    private void num7ActionPerformed(java.awt.event.ActionEvent evt) {
         EnterNumbers("7");       // inputs the number 7
     }//GEN-LAST:event_num7ActionPerformed
 
-    private void ResultsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ResultsActionPerformed
+    private void ResultsActionPerformed(java.awt.event.ActionEvent evt) {
         // Text Panel that displays numbers and calculations
-    }//GEN-LAST:event_ResultsActionPerformed
+        //for other buttons to acess the panel
+        //need a method to call to i.e ^
+    }
 
-    private void num8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_num8ActionPerformed
+    private void num8ActionPerformed(java.awt.event.ActionEvent evt) {
         EnterNumbers("8");       // inputs the number 8
-    }//GEN-LAST:event_num8ActionPerformed
+    }
 
-    private void ClearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ClearActionPerformed
+    private void ClearActionPerformed(java.awt.event.ActionEvent evt) {
         Results.setText(""); //Clear Button
         //Doesnt remove the numbers that were previously typed in
-    }//GEN-LAST:event_ClearActionPerformed
+    }
 
-    private void decimalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_decimalActionPerformed
+    private void decimalActionPerformed(java.awt.event.ActionEvent evt) {
         if(!Results.getText().contains(".")){ //checks to see if current line has a point 
             Results.setText(Results.getText() + decimal.getText()); // appends and sets text to include a point
         }
-    }//GEN-LAST:event_decimalActionPerformed
+    }
 
     private void FullClear1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FullClear1ActionPerformed
         Results.setText(""); //sets panel to empty
@@ -443,19 +444,19 @@ public class Button extends javax.swing.JFrame {
         num1 = "";
         num2 = "";
         
-    }//GEN-LAST:event_FullClear1ActionPerformed
+    }
 
     private void squareRootActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_squareRootActionPerformed
         firstNumber = Double.parseDouble(Results.getText());
         Results.setText("");
-        operator = "sq";
+        operator = "sq"; //couldn't think of another symbol
           if(operator == "sq"){ // calculations are done here instead to avoid the need to input a second number 
             result = Math.sqrt(firstNumber);
             Results.setText(String.valueOf(result));
         }
-    }//GEN-LAST:event_squareRootActionPerformed
+    }
 
-    private void toPercentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_toPercentActionPerformed
+    private void toPercentActionPerformed(java.awt.event.ActionEvent evt) {
         firstNumber = Double.parseDouble(Results.getText());
         Results.setText("");
         operator = "%";
@@ -463,11 +464,9 @@ public class Button extends javax.swing.JFrame {
             result = firstNumber / 100.0;
             Results.setText(String.valueOf(result));
         }
-    }//GEN-LAST:event_toPercentActionPerformed
+    }
 
-    /**
-     * @param args the command line arguments
-     */
+    
     public static void main(String args[]) {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
@@ -476,7 +475,7 @@ public class Button extends javax.swing.JFrame {
         });
     }
 
-    // Variables declaration - do not modify//GEN-BEGIN:variables
+   
     private javax.swing.JButton Backspace;
     private javax.swing.JButton Clear;
     private javax.swing.JButton FullClear1;
@@ -502,5 +501,5 @@ public class Button extends javax.swing.JFrame {
     private javax.swing.JButton toEqual;
     private javax.swing.JButton toPercent;
     private javax.swing.JButton toPowerOf;
-    // End of variables declaration//GEN-END:variables
+    
 }
