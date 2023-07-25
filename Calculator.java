@@ -309,7 +309,7 @@ public class Button extends javax.swing.JFrame {
         EnterNumbers("5");    
     }
 
-    private void changeSignActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_changeSignActionPerformed
+    private void changeSignActionPerformed(java.awt.event.ActionEvent evt) {
         double number = Double.parseDouble(String.valueOf(Results.getText())); //as the numbers are input as strings the Double.parseDouble reads thourgh and converts the number into a double and saves it.
         number = number * (-1);
         Results.setText(String.valueOf(number));
@@ -406,11 +406,11 @@ public class Button extends javax.swing.JFrame {
              backSpace = sb.toString(); // saves all digits excluding the one recently deleted
              Results.setText(backSpace); // set results panel to digits saced in backspace
          }
-    }//GEN-LAST:event_BackspaceActionPerformed
+    }
 
     private void num7ActionPerformed(java.awt.event.ActionEvent evt) {
         EnterNumbers("7");       // inputs the number 7
-    }//GEN-LAST:event_num7ActionPerformed
+    }
 
     private void ResultsActionPerformed(java.awt.event.ActionEvent evt) {
         // Text Panel that displays numbers and calculations
